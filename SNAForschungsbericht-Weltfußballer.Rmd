@@ -1,0 +1,1446 @@
+---
+title: "226305 Netzwerk- und Beziehungsmanagement - Forschungsbericht"
+author: "Dunja Fadel | df054@hdm-stuttgart.de, Naomi Genter | ng072@hdm-stuttgart.de, Jakob Hertl | jh256@hdm-stuttgart.de, Christina Menner | cm142@hdm-stuttgart.de, Veronika Veile | vv013@hdm-stuttgart.de"
+date: "Wintersemester 2021"
+output:
+  word_document:
+    toc: yes
+    toc_depth: '3'
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: 3
+    number_sections: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+subtitle: Netzwerkanalyse der Top 50 Fußballer des 20. Jahrhunderts
+---
+
+# Einleitung
+
+„Einige Leute halten Fußball für eine Sache von Leben und Tod. Ich mag diese Einstellung nicht. Ich versichere Ihnen, dass es viel ernster ist!“ Das sagte schon William „Bill“ Shankly, ehemaliger schottischer Fußballspieler und -trainer im Jahr 1981. Heute ist Fußball die beliebteste Sportart weltweit und erfreut sich Schätzungen zu Folge an mehr als 4 Milliarden Fans (Statista, 2018). Kaum ein anderer Sport lockt seit vielen Jahrzehnten weltweit mehr Menschen vor die Fernseher und in die Stadien. Mit Blick auf die durchschnittlichen Zuschauerzahlen in den europäischen Topligen zeigt sich, dass die Fußballstadien in der deutschen Bundesliga über Jahre hinweg die meisten Fans begrüßten. Bis zu Beginn der Corona-Pandemie feuerten durchschnittlich mehr als 43.000 Menschen die Teams vor Ort an. Schon zu Zeiten von Größen wie Franz Beckenbauer oder Lothar Matthäus hatte der Weltfußball eine hohe Relevanz für Gesellschaften auf allen Kontinenten und in Deutschland (Statista, 2019). Diese Popularität macht den „Volkssportart Nummer 1“ darüber hinaus zu einem immensen Wirtschaftsfaktor. So setzte der europäischer Fußballmarkt in der Saison 2019/2020 25,2 Milliarden Euro um, die erste Fußball-Bundesliga erwirtschaftete im gleichen Zeitraum einen Erlös von rund 3,8 Milliarden Euro (DFL, 2019).
+
+Der Erfolg des Fußballs setzt sich aus verschiedenen Bausteinen zusammen: Er verbindet Menschen in einem globalen Spektakel und wird zum Schauplatz nationaler Inszenierung. Er verspricht sozialen Aufstieg und verheißt ein friedliches Zusammenkommen von Menschen unterschiedlicher sozialer und regionaler Herkunft. Dahinter steck Idole, mit denen sich die Fans identifizieren und zu denen aufgeschaut wird (Burton et al., 2018). Doch was genau macht Vereine und einzelne Spieler erfolgreich? Gibt es eine Art Erfolgsrezept auf dem Weg nach ganz oben und inwiefern besteht ein Zusammenhang zu Netzwerken, die sich auch im Fußball zweifelsohne entwickelt haben? Die vorliegende Arbeit versucht einen Einblick in das Netzwerk des Weltfußballs zu schaffen und beschäftigt sich mit der Frage: 
+
+„Welche der Weltfußballer bzw. Top 50 Spieler des 20. Jahrhunderts haben zeitgleich im selben Verein und/oder derselben Nationalmannschaft gespielt und wie haben sich ihre Karrieren entwickelt?“
+
+## Abstract und Keywords
+
+Dafür gilt es zuerst den Forschungsgegenstand dieser Arbeit zu klären und das Wort „Weltfußballer“ zu definieren. Danach richtet sich der Blick auf den Unterschied zwischen den Weltfußballertiteln „FIFA Weltfußballer“ und „Ballon D‘Or“, sowie die für die Datenerhebung herangezogene Liste. Darüber hinaus erfolgt ein Einblick in den aktuellen Forschungsstand. Netzwerktheorien spielen bereits eine wichtige Rolle auf verschiedenen Ebenen des professionellen Fußballs: Zum einen aus sportkommunikationswissenschaftlicher Sicht neben dem Platz, zum anderen über „Big-Data“ direkt auf dem Platz. In Anbetracht der bevorstehenden Datenerhebung thematisiert das Papier außerdem herangezogene (Netzwerk-)Theorien sowie drei zentrale Hypothesen und weitere Annahmen, die in Bezug auf die Netzwerkanalyse getroffen werden. Der große Fokus dieser Arbeit liegt in der Datenerhebung, Erstellung von Netzwerken sowie auf analytischer Ebene in deren Auswertung und Interpretation. Dies bildet gemeinsam mit der Hypothesenprüfung den Hauptteil unserer Arbeit. Es folgt ein Einblick in die Projekterkenntnisse und deren Limitationen, bevor die finale Beantwortung der Forschungsfrage stattfindet und abschließend ein Fazit gezogen wird.
+
+Keywords: Netzwerkanalyse, Weltfußball, Ballon D'Or, Fußball
+
+## Einordnung Forschungsstand und vergleichbare Studien
+
+Bevor sich der Blick auf den aktuellen Forschungsstand und die herangezogenen Theorien richtet, gilt es zunächst grundlegende Begrifflichkeiten zu klären. Dieses Kapitel beschäftigt sich demnach mit dem Wort „Weltfußball“ als solches sowie den zwei wichtigsten Preisen im Weltfußball, sowie der für die Auswertung herangezogenen Liste als Datengrundlage.
+
+Spricht man in der Fußballbranche vom sogenannten „Weltfußball“ so ist damit international gespielter und erfolgreicher Fußball gemeint (Duden, 2021). Die Begrifflichkeit „Weltfußballer“ hingegen bezieht sich auf einzelne Sportler. Als Weltfußballer werden die besten Fußballer der Welt bezeichnet. Mit dem „Ballon D’Or“ und der FIFA Auszeichnung „The Best“ gibt es gleich zwei offizielle Weltfußballer-Titel. 
+
+Der Ballon D’Or wurde 1956 von Gabriel Hanot und Jacques Ferran in Zusammenarbeit mit dem französischen Fußballmagazin France Football ins Leben gerufen und zeichnete bis 1994 den besten Spieler Europas aus. Ab 1995 durften auch Nicht-Europäer, die bei einem europäischen Klub unter Vertrag standen, gewählt werden. Von 2007 bis 2009 wurde der „goldene Ball“ dann als zweiter Weltfußballertitel vergeben. Der ursprüngliche Weltfußballertitel stammt von der Fußballorganisation FIFA. Ab dem Jahr 1991 wurden jährlich die besten Fußballer der Welt mit dem Titel „FIFA Weltfußballer des Jahres“ ausgezeichnet. Anfangs stimmten lediglich die Nationaltrainer aller FIFA-Verbände ab, 2004 wurde die Jury um die Kapitäne der Nationalmannschaften erweitert. So blieb es bis 2009. Es folgte eine Kooperation der beiden Preisverleiher, die den Namen „FIFA Ballon D’Or trug. Journalisten, Nationaltrainer und die Kapitäne der Nationalteams aus allen FIFA-Verbänden ermittelten durch ihr Wahlergebnis den Weltfußballer des Jahres. Seit 2016 werden wieder zwei Titel vergeben: "France Football" vergibt wie vor 2009 den Ballon D'Or, die FIFA den Weltfußballer-Titel, offiziell nun "The Best FIFA Men's Player" (kicker, 2019). Anders als in der Vergangenheit gilt der Ballon D’Or mittlerweile als der preisträchtigere Titel. Die Jury besteht ausschließlich aus je einem Sportjournalisten aus den Ländern der 53 Mitgliedsverbände der UEFA sowie 53 Juroren aus den Ländern derjenigen außereuropäischen Verbände, die an mindestens einer Weltmeisterschaftsendrunde teilgenommen haben. Beim Titel der FIFA fließen die Abstimmungsergebnisse von Sportjournalisten, Cheftrainern, Spielführern aller Nationalteams sowie Fans auf der Website der FIFA zu je 25 Prozent in das Gesamtergebnis ein (spox, 2019). Rekordtitelträger ist der Argentinier Lionel Messi mit sechs Auszeichnungen, gefolgt von Cristiano Ronaldo mit fünf Titeln. Der erster – und bis heute einzige Deutsche – Sieger des Weltfußballer-Titels war Rekordnationalspieler Lothar Matthäus
+
+Neben den Weltfußballer-Titeln wird jährlich zudem die Top-11 des Jahres gewählt. Außerdem erfolgte im Dezember 1999 anlässlich des Jahrtausendwechsels eine Wahl zur Top-11- des 20. Jahrhunderts, die vom englischen Fußballmagazin „World Soccer“ durchgeführt wurde. Dieses Ranking bildet die Datengrundlage für die fortlaufende Analyse. Die Liste ist unter folgendem [Link](http://www.englandfootballonline.com/TeamHons/HonsWldSocPlyrsCent.html) abrufbar.
+
+Zur Wahl standen alle Spieler, die im 20.Jahrhundert, also zwischen 1900 und 1999 – aktiv waren. Es entstand eine Top 100 Liste, wobei wir aufgrund der großen Menge an Daten den Fokus auf die Top 50 Spieler gelegt haben. Vertreten sind unterschiedliche Spielertypen, aus unterschiedlichen Nationalitäten und unterschiedlichen Fußballdekaden. Spitzenreiter der Liste ist der Rekordtorschütze der brasilianischen Nationalmannschaft Pelé. 
+
+# Forschungsstand, angewendete Theorien und Hypothesen
+
+Nach der Einordnung des Forschungsgegenstand, beschäftigt sich die Arbeit nun mit dem aktuellen Stand der Forschung bezüglich Netzwerkanalysen im professionellen Fußball. Zudem folgt der Einblick in Theorien die mögliche Netzwerkbeziehungen und Konstellationen erklären können. Anhand dieser Informationen werden dann zwei zentrale Hypothesen aufgestellt.
+
+## Forschungsstand 
+
+Wie bereits zu Anfang erwähnt spielen Netzwerke im allgemeinen sowie Netzwerktheorien bereits seit Jahren eine Rolle im professionellen Fußball (Symanzik,2009). Analyseabteilungen verwenden Big-Data und Netzwerkdaten zur Auswertung von Spielstatistiken (Wer passt am häufigsten zu wem, welcher Spieler ist der Knotenpunkt unseres Spiels, Welchen Spieler zieht es am meisten in Richtung eines anderen Spielers? etc.). Bücher wie „Revolution im Profifußball: Mit Big Data zur Spielanalyse 4.0“ geben Aufschluss über die neue Art der Datenanalyse im Profisport und erörtern den Anwendungsbereich, die Vorgehensweise und die Vorteile dieser Methodik. Ein praktisches Beispiel aus dem Sportjournalismus bietet diese [Passanalyse des Europameisterschaftsspiels](https://www.derstandard.at/story/1339638811784/netzwerkanalyse-esp---fra-spaniens-stetig-zunehmende-passfrequenz-hat-ihren-preis) der spanischen Nationalmannschaft gegen Frankreich aus dem Jahr 2012. Zudem thematisieren unterschiedliche Hochschulen Europas ähnliche Inhalte auf akademische Weise: So bietet die Sporthochschule Köln einen Masterstudiengang zur Spielanalyse mit Schwerpunkt Sozialer Netzwerkanalyse an, die Universität Zürich bietet einen speziellen Kurs zum Thema „Fußballanalyse“. Des Weiteren gibt es bereits ein [„Weltfußballer-Netzwerk“ aus dem Jahr 2015](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjDk8jc5fzzAhXygf0HHb46AXAQFnoECAIQAQ&url=https%3A%2F%2Flinkurio.us%2Fblog%2Fballon-dor-network%2F&usg=AOvVaw3VnxA3r-X39nEVl0yqo_rJ). Dieses zeigt auf, welche Jurymitglieder, welchen Fußballern ihre Stimme bei der Wahl zum Weltfußballer gegeben haben. Dadurch entsteht ein Überblick über (mögliche) Konstellationen wie Freundschaften, Feindschaften oder „Kooperationen“ wie man sie beispielsweise von Veranstaltungen wie dem Eurovision-Song-Contest kennt, bei dem bestimmte Länder ihre Punkte in der Regel – unabhängig vom Kandidaten – an die gleichen Länder vergeben.
+Auch zu Großturnieren wie beispielsweise der FIFA Fußballweltmeisterschaft 2014 gibt es bereits Netzwerkanalysen. Die vorliegende Studie analysiert den Zusammenhang zwischen Erfolg bzw. Misserfolg 32 [Fußballnationalmannschaften bei der WM anhand ihrer Netzwerkmerkmale](https://www.tandfonline.com/doi/abs/10.1080/24748668.2015.11868778). Ein Datensatz von 37.864 Pässen zwischen Mannschaftskameraden in 64 Fußballspielen ermöglichte die Untersuchung der Netzwerkstruktur und der Mannschaftsleistung.
+
+Es zeigt sich, dass die Soziale Netzwerkanalyse im Profifußball angekommen und in der Zukunft nicht mehr wegzudenken ist. Eine Analyse über die besten Fußballer des 20. Jahrhunderts gibt es nach unserem Forschungsstand jedoch noch nicht.
+
+## Theorien
+
+Eine zentrale Frage, der die vorliegende Arbeit nachgeht, ist die nach dem Einfluss von Homophilie auf den Erfolg der Sportler und ihre Spitzenleistungen. Der eigentliche Homophilie-Effekt bezieht sich darauf, dass sich oftmals Freundschaften zwischen Personen mit ähnlicher kultureller Prägung bilden (Lazarsfeld & Merton, 1954), da es in der Kommunikation eher zu Übereinstimmungen und damit seltener zu Konflikten kommt. Zudem erhöht eine ähnliche kulturelle Prägung in Kombination mit ähnlichen Interessen die Wahrscheinlichkeit, in der Freizeit gemeinsamen Aktivitäten nachzugehen. Aber nicht nur die gleiche kulturelle Prägung fördert den Homophilie-Effekt. Auch Gemeinsamkeiten wie das gleiche oder ähnliche Alter, die gleiche Sprache oder dieselbe ethnischer Herkunft können einen Einfluss nehmen (Rytina & Morgan, 1982). All diese Faktoren könnten das Mannschaftsgefüge und die eigene Zufriedenheit stärken und zu größerem Erfolg auf gemeinschaftlicher und individueller Ebene führen.   
+
+Einen weiteren theoretischen Ansatz bietet das soziale Kapital in der Sportentwicklung. Seit dem Pionierbeitrag von Coleman (1988) wird das Konstrukt des sozialen Kapitals in der Sozial- und Wirtschaftswissenschaft zunehmend diskutiert (Bourdieu, 2010). Es wird aufgezeigt, dass infolge äußerer Einflüsse soziale Normen und Werte, interpersonelles Vertrauen, Reziprozität sowie soziale Netzwerke in der Gesellschaft zeitweise geschwächt wurden (Coleman, 1988). Dies weist erhebliches Potenzial für die Sportforschung auf. Als soziales Kapital bezeichnet man das Netz der sozialen Beziehungen eines jeden Einzelnen. Dazu zählen beispielsweise Freundschaften, Vertrauensbeziehungen, Bekanntschaftsbeziehungen oder Geschäftsverbindungen und Mitgliedschaften in Gruppen, Organisationen. Das Individuum profitiert davon durch das Gefühl von Gruppenzugehörigkeit, Möglichkeiten, Hilfe und Informationen zu erhalten sowie gegenseitige Anerkennung und Wertschätzung. Um das soziale Kapital aufrecht zu erhalten, bedarf es Beziehungsarbeit (Fuchs-Heinritz & König, 2005, S. 166), da es nicht durch Institutionalisierung gesichert ist, sondern immer erneuert werden muss (Fuchs-Heinritz & König, 2005, S. 166). Entsprechend stellt sich die Frage, inwiefern diese Struktur notwendig ist, um erfolgreiche Spieler zu entwickeln und kann einen wichtigen Ansatz bei der Interpretation der Daten liefern.
+
+Die Kapital-Theorie hingegen beschäftigt sich mit der Frage, ob eine Kapitalisierung bzw. Kommerzialisierung des Fußballs notwendig ist, um Top-Spieler auszubilden bzw. in die Mannschaft aufnehmen zu können. Demnach könnten nur Mannschaften mit bestimmten wirtschaftlichen Ressourcen Weltfußballer entwickeln. In der heutigen Zeit des Fußballs spielt Geld immer früher eine immer größere Rolle für die Vereine. Bereits im Bambini-Bereich wird Geld investiert, um zum einen auf ein gutes Scouting-Team zurückzugreifen, Nachwuchsleistungszentren zu bauen und zum anderen Top-Talente an den Verein zu „bringen“ und zu binden (Rasch, 2014). Die Entwicklung ist rasant: Waren vor circa 10 Jahren Ablösesummen von 30 Millionen Euro oder mehr das Nonplusultra, beschäftigt sich der Profifußball im Jahr 2021 regelmäßig mit Deals in dreistelliger Millionenhöhe. Um dort mithalten zu können, scheint eine weitere eine Kommerzialisierung des Profifußballs unabdingbar. Wilkesmann forschte 2014 zu der Frage „Schießt Geld tatsächlich Tore?“ und thematisierte zudem die (steigende) Ungleichheit im Profifußball. Eine Analyse über zwölf Spielzeiten von 2002 bis 2015 zeigt, dass ein starker Zusammenhang zwischen der Gesamtsumme aller Spielergehälter (Budgets) und den erzielten Punkten existiert. Dieses Ergebnis steht damit in Übereinstimmung zu früheren Untersuchungen von Frick (2005) und Gerrad (2008) für die englische Liga. Durch geschicktes Management schaffen es einzelne Vereine jedoch immer wieder, diesen Zusammenhang zu durchbrechen. Betrachtet man den sogenannten Gini-Koeffizienten wird jedoch eine mit der Zeit immer größere Erhöhung der Ungleichheit im Profifußball – auch der Fußballbundesliga – deutlich. Der Gini-Koeffizient ist ein statistisches Maß zur Messung der Ungleichheit einer Verteilung. Über die betrachteten zwölf Jahre hat die soziale Ungleichheit in der Bundesliga zwar nur leicht zugenommen, es ist aber davon auszugehen, dass aufgrund der rasanten Entwicklungen von einzelnen Vereinen aus den letzten Jahren (siehe FC Bayern München, Borussia Dortmund oder RB Leipzig) die Ungleichheit weiterwächst und immer größer wird. Dies könnte zur Folge haben, dass in einer vergleichbaren Liste vom 21. Jahrhundert deutlich weniger Vereine Weltfußballer hervorbringen würden als es noch im 20. Jahrhundert der Fall war (Wilkesmann, 2014).
+
+Die letzte herangezogene Theorie unserer Arbeit ist die der Konkurrenz und Kooperation. Es gibt unterschiedliche Theorien, die sich mit Kooperation und Konkurrenz beschäftigen. Alle diese Theorien haben gemeinsam, dass sie Kooperation als Zusammenarbeit mindestens zweier Parteien definieren. Konkurrenz hingegen beschreibt einen Wettbewerb zwischen Parteien um ein zu erlangendes Gut. Dieses Gut sollte etwas darstellen, das von allen Parteien angesehen ist und gleichzeitig so knapp sein, dass nicht alle Parteien genug erhalten können, um zufrieden zu sein (Werron, 2009). Dass Konkurrenz in einem von Kooperation geprägtem Netzwerk stattfindet, erscheint erst einmal widersprüchlich. Allerdings ist das nebeneinander Existieren von Kooperation und Konkurrenz in der Praxis der Normalfall in komplexen Interaktionen (Schönig, 2015). Die Akteure sind sich der herrschenden Konkurrenz dabei stets bewusst. 
+Im Hinblick auf den professionellen Fußball entsteht eine solche Situation fast schon auf natürliche Art in verschiedenen Bereichen. Zum einen kämpfen die Sportler unter der Woche gegeneinander, um einen der Plätze in der Startformation zu erhalten, obwohl sie gleichzeitig ein Team sind und dies an Spieltagen stets unter Beweis stellen müssen. Zum anderen entsteht eine Kooperation-Konkurrenz-Situation beim Blick auf die Nationalmannschaft (Wahnschaffe-Waldhoff & Mutz, 2020). So bestreiten die Spieler im Laufe der Saison Spiele gegeneinander, um erfolgreicher zu sein als der Kontrahent, in der Nationalmannschaft verfolgen sie dann das gemeinsame Ziel des Triumphes (Beispiel: Toni Kroos für Real Madrid und Manuel Neuer für den FC Bayern München als Gegner in der Champions League und Teamkameraden in der deutschen Fußballnationalmannschaft). Diese Konkurrenzbeziehungen im Sport werden als „assoziativer Wettbewerb“ bezeichnet. Woratschek (2004, S. 9) spricht in diesem Zusammenhang von „Kooperenz“, der prägenden Simultanität von Konkurrenz und Kooperation. Der andauernde Wechsel zwischen Konkurrenz und Kooperation und der damit verbunden Druck kann den Erfolg der einzelnen Spieler und der Mannschaft in beide Richtungen maßgeblich beeinflussen und ist deshalb auch in Bezug auf das nachfolgende Netzwerk zu beachten.
+
+
+## Arbeitshypothesen
+
+Aus dem aktuellen Forschungsstand, den zu beschriebenen Theorien sowie den Annahmen über unser Netzwerk ergeben sich daraus folgende Hypothesen für das „Weltfußballernetzwerk“:
+ 
+1.	Große erfolgreiche Vereine sind wichtige Broker unter den Spielern.
+
+2.	Spieler aus der früheren Zeit haben weniger Kanten als Spieler aus der Neuzeit (ab 1980er-Jahren), weil sie „vereinstreuer“ waren. 
+
+3.	Große wichtige Vereine setzten gezielt auf die Förderung junger Talente, um erfolgreich zu sein.
+
+Außerdem ist davon auszugehen, dass hauptsächlich Offensivspieler in der Liste vertreten sein werden. Dies zeigt sich auch bei der Wahl der Weltfußballer oft deutlich: Offensivspieler werden aufgrund ihres sichtbareren Anteil am Erfolg durch Tore oder spektakuläre Dribblings oft als besser empfunden als Defensivspieler. Darüber hinaus ist aus unserer Sicht davon auszugehen, dass vor allem Spieler aus den großen Fußballnationen Frankreich, Deutschland, Italien, Brasilien und Deutschland in der Liste zu finden sind, da diese Länder seit Jahrzehnten eine dominante Rolle im Herrenfußball spielen. Die meisten Spieler der Liste könnten demnach aus Brasilien stammen. Brasilianer sind bekannt für ihren Offensivfußball und ihr technisch anspruchsvolles Fußballspiel. Dies ist sowohl ansehnlich für Fans und gleichzeitig mit fünf Weltmeistertiteln für Brasilien überaus erfolgreich. Außerdem erwägen wir die Theorie, dass nur ein Bruchteil der besten Spieler auch eine erfolgreiche Trainerkarriere absolvierte: Eine ausgezeichnete Fußballkarriere verspricht also nicht zwingend Erfolg oder den Durchbruch aus Fußballtrainer. Die nachfolgende Analyse klärt, inwiefern die aufgestellten Thesen auf das Netzwerk zutreffen und gibt einen Einblick in die Strukturen und Zusammenhänge der Karrierewege der Top-50-Fußballer des 20. Jahrhunderts.
+
+Hypothese A: Die meisten der Top 50 Fußballer sind nach der Spielerkarriere Trainer geworden.
+
+Hypothese B: Es sind in den gewählten Top 50 mehr Offensivspieler vertreten, als andere Spielerpositionen.
+
+Hypothese C: Vereine, die heute weiterhin sehr erfolgreich sind, waren auch im 20. Jahrhundert für viele Spieler attraktiv und sind sogenannte "Broker".
+
+Hypothese D: Es wird am meisten Brasilianer im Netzwerk geben, da Brasilien den höchsten Degree-Wert im Gesamtnetzwerk hat.
+
+Hypothese E: Vor allem Spieler aus der Neuzeit (ab den 80ern) wurden zu den Top-Fußballern des 20. Jahrhunderts gewählt, weil die Umfrage unserer Datenerhebung 1999 durchgeführt wurde.
+
+Hypothese F: Spieler aus der früheren Zeit haben weniger Kanten, d.h. sie sind weniger vernetzt, als Spieler aus der Neuzeit (ab den 80ern), weil sie "vereinstreuer" waren.3.	
+
+Hypothese G: Große wichtige Vereine setzten gezielt auf die Förderung junger Talente, um erfolgreich zu sein.
+
+# Datenerhebung: Zugang, Bereinigung und Codebuch
+
+## Datenzugang
+
+Unsere Daten gehen aus der Liste "100 Players of the Century" der Website http://www.englandfootballonline.com/TeamHons/HonsWldSocPlyrsCent.html hervor. Ursprünglich stammt der Datensatz aus dem internationalen Fußball-Magazin "World Soccer", das im Jahr 2000 eine Leserumfrage durchführte und die Leser bat, die - ihrer Meinung nach - 100 besten Fußballspieler des 20. Jahrhunderts zu wählen. Dazu suchten die Leser ihre Top 10 Spieler in der Reihenfolge ihrer Präferenz aus. Jeder Stimme, die ein Fußballspieler erhielt, wurden Punkte zugewiesen. Zehn Punkte gab es für eine Stimme für den ersten Platz, neun für die Stimme für den zweiten Platz usw., bis zum zehnten Platz, der einen Punkt gab. Die Umfrageergebnisse wurden in der World Soccer Ausgabe vom Dezember 1999 veröffentlicht. 
+
+In der sozialen Netzwerkanalyse müssen Netzwerkgrenzen, Akteure  und Relationen klar definiert werden. Dazu muss ein Netzwerk zeitlich, räumlich und sachlich abgegrenzt werden (Baur, 2014). In unserer Netzwerkanalyse entschieden wir uns für die ersten 50 Fußballspieler der Liste. Diese stellen die ersten Akteure, d.h. Knoten in unserem Netzwerk dar. Des Weiteren haben wir über die Websiten [Transfermarkt](https://www.transfermarkt.de) und [Wikipedia](https://de.wikipedia.org) die Spielerprofile der 50 Fußballer untersucht und hierüber unsere weiteren Daten wie Vereine und Nationalmannschaften - bei denen die Spieler zuvor unter Vertrag standen - erhoben. Diese stellen die weiteren Akteure und Knoten in unserem Netzwerk dar. Insgesamt sind sowohl die Spieler, als auch die Fußballvereine und die Nationalmannschaften Gegenstand unserer Netzwerkanalyse. Zeitlich eingegrenzt ist das Gesamtnetzwerk bereits durch die Umfrage des World Soccer Magazins, die den Zeitraum von 1900 bis 1999 umfasst. Das Netzwerk ist räumlich nicht begrenzt, da unsere Nodes aus verschiedenen Nationen der Welt stammen. 
+
+## Bereinigung des Datensatzes
+
+Nach Rürup et al. (2015) können Beziehungen zwischen Akteuren unterschiedlicher Natur sein. In unserer Analyse ist eine Beziehung d.h. eine Kante über die Mitgliedschaft in einem Verein oder einer Nationalmannschaft definiert. Es handelt sich hier um Arbeitsverhältnisse. Beziehungen zwischen den Top 50 Fußballspielern wurden nicht erhoben, sondern ausschließlich Beziehungen zwischen Individuen und Organisationen. Wir unterscheiden zwei verschiedene Relationen in unserem Netzwerk: Zum einen, ob es sich bei der Mitgliedschaft um die Funktion eines Fußballspielers bei dem jeweiligen Verein oder der Nationalmannschaft handelt oder zum anderen, ob es sich um die Funktion eines Trainers handelt. Die Beziehungsarten sind entsprechend unterschiedlich codiert. Die Daten wurden in einer Tabelle mit Zeilen und Spalten arrangiert. Der Datensatz ist unter [Github](https://github.com/SNA-Gruppenarbeit-Weltfussballer) aufrufbar.  
+
+## Codebuch
+
+Das [Codebuch](https://github.com/SNA-Gruppenarbeit-Weltfussballer/Codebuch) ist ebenfalls auf Github hinterlegt. Es beschreibt Variablen und Relationen. 
+
+# Analyse und Interpretation des Gesamtnetzwerks
+
+Das Gesamtnetzwerk umfasst 298 Knoten und 2201 Beziehungen (siehe igraph-Objekt). Es ist sowohl ungerichtet als auch ungewichtet.
+
+```{r Gesamnetzwerk erstellen, echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+library(igraph)
+library(tidyverse)
+
+# Einlesen der Edge- und Nodelist
+edges <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph50/main/WorldSoccerEdgelist.csv", header=T, as.is=T, sep = ",")
+nodes <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph50/main/WorldSoccerNodelist.csv", header=T, as.is=T, sep = ",")
+
+# Matrix erstellen
+edgematrix <-as.matrix(edges)
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt s
+football <- graph_from_data_frame(d=edgematrix, vertices=nodes, directed=F)
+football
+```
+
+```{r Beschreibung des Netzwerks, message=FALSE, warning=FALSE, paged.print=TRUE}
+# Parameter zur Beschreibung des Netzwerks
+
+## ist das Netzwerk bereits vereinfacht?
+
+is.simple(football)
+
+## besteht das Netzwerk aus Komponenten?
+
+is.connected(football)
+
+components(football)
+
+## Dichte des Netzwerks
+
+edge_density(football, loops=FALSE)
+
+## Umfang des Netzwerks
+
+diameter(football)
+
+## Pfaddistanzen (Distance)
+
+farthest_vertices(football)
+
+```
+
+Das Hauptnetzwerk besteht aus drei Komponenten mit 283, 12 und 3 Knoten, die nicht miteinander verbunden sind. Die Dichte im Netzwerk beträgt 4,97 Prozent von allen möglichen Verbindungen. Die maximale Pfaddistanz beträgt 8 Schritte.
+
+```{r Einfache Visualisierung des erstellten Objekt, fig.height=10, fig.width=14, message=TRUE, warning=TRUE, paged.print=TRUE}
+
+V(football)[V(football)$type == 1]$shape <- "circle"
+V(football)[V(football)$type == 2]$shape <- "square"
+V(football)[V(football)$type == 3]$shape <- "square"
+V(football)[V(football)$type == 1]$color <- "aliceblue"
+V(football)[V(football)$type == 2]$color <- "steelblue"
+V(football)[V(football)$type == 3]$color <- "lightskyblue1"
+
+plot(football,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.label.cex=0.5,
+     main ="Übersicht Gesamtnetzwerk",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+```
+Da es sich bei unserem Gesamtnetzwerk um ein großes Two-Mode-Netzwerk handelt, werden die Knoten unterschiedlich visualisiert. Die Nodes der Fußballspieler werden als Kreis dargestellt und die Vereine sowie Nationalmannschaften als Quadrat. Darüber hinaus werden die verschiedenen Akteure farblich voneinander abgegrenzt. Die Visualisierung des Gesamtnetzwerks zeigt die Aufteilung in die oben berechneten drei Komponenten. Der Nachteil bei der grafischen Darstellung von sehr großen Netzwerken ist ihre Unübersichtlichkeit (Rürup et al., 2015). In den nächsten Schritten werden wir daher das Gesamtnetzwerk in Teilnetzwerke untergliedern, um unsere aufgestellten Hypothesen zu testen und mehr Erkenntnisse im Hinblick auf unsere Forschungsfrage zu gewinnen. 
+
+Aus einem Netzwerk lassen sich mittels mathematischer Berechnungen unterschiedliche Zentralitätsmaße ermitteln, die jeweils einen besonderen Aspekt in den Blick nehmen. Somit lassen sich genauere Aussagen über die Beziehungsstruktur im Netzwerk treffen. Beispiele für Zentralitätsmaße sind die Betweeness-Zentralität oder das Degree-Maß (Rürup et al., 2015). Das Degree-Maß zählt die Zahl der Verbindungen eines Knotens zu anderen Knoten im Netzwerk. Akteure die viele Kanten haben, sind nach der Degree-Zentralität demnach wichtiger im Netzwerk und weisen einen hohen Degree-Wert auf, als Akteure mit wenigeren Verbindungen (Fuhse, 2018; Rürup et al., 2015). Die Betweenness-Zentralität hingegen misst, inwiefern ein Knoten auf den kürzesten Pfaden zwischen anderen Knoten liegt. Sie steht für die Anzahl der kürzesten Pfade, die über diesen Knoten laufen und misst damit einen sogenannten Broker-Status im Netzwerk (Fuhse, 2018). Sie ist als Gradmesser für das Potential von Kontrollmöglichkeiten in einem Netzwerk zu verstehen (Mutschke, 2019). Im folgenden untersuchen wir unser Gesamtnetzwerk mit den vorher beschriebenen Zentralitätsmaßen. 
+
+```{r Analyse des Gesamtnetzwerkes, message=FALSE, warning=FALSE, paged.print=FALSE}
+
+# Degree-Zentralität Gesamtnetzwerk
+
+degree_football <- degree(football, normalized=T)
+
+which.max(degree_football)
+
+# Die Nationalmannschaft Brasiliens ist der Knoten, der mit 53 die höchste Degree-Zentralität aufweist und damit die meisten Verbindungen im Netzwerk hat. Dies bedeutet jedoch in unserem Netzwerk nicht zwangsläufig, dass die meisten der Top 50 Spieler auch in der brasilianischen Nationalmannschaft gespielt haben, sondern dass die Spieler dort sehr lange, d.h. über mehrere Jahre und Dekaden waren. 
+
+# Betweenness-Zentralität Gesamtnetzwerk 
+
+betweenness_football <- betweenness(football, normalized=T)
+
+which.max(betweenness_football)
+
+# Der Verein Real Madrid hat mit 230 den höchsten Betweenness-Wert, d.h. die höchste Anzahl der kürzesten Verbindungen und ist damit gut erreichbar für die anderen Knoten. Real Madrid nimmt damit in unserem Netzwerk eine Broker-Funktion ein und ist bis heute ein erfolgreicher Fußballverein.
+
+```
+
+# Analyse der Teilnetzwerke und Hypothesenüberprüfung 
+
+Hypothese A: Die meisten der Top 50 Fußballer sind nach der Spielerkarriere Trainer geworden. 
+
+```{r Hypothese A und Teilnetzwerke, fig.height=10, fig.width=14, message=TRUE, warning=TRUE, paged.print=TRUE}
+
+## "Nur Spieler" und "Auch Trainer" im Verhältnis
+
+E(football)[E(football)$relationship == 1]$color <- "red"
+E(football)[E(football)$relationship == 2]$color <- "blue"
+football
+
+plot(football,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.cex=0.5,
+     vertex.label.color="black",
+     main ="Übersicht Gesamtnetzwerk Spieler und Trainer",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+# Die Visualisierung zeigt auf den ersten Blick, dass viele der Fußballer Verbindungen als Trainer-Beziehung aufweisen. 
+
+## Teilnetzwerk Trainerstationen
+
+train <- subgraph.edges(football, E(football)[relationship==2])
+train
+V(train)[V(train)$type == 1]$shape <- "circle"  
+V(train)[V(train)$type == 2]$shape <- "square"
+V(train)[V(train)$type == 3]$shape <- "square"
+V(train)[V(train)$type == 1]$color <- "tan"
+V(train)[V(train)$type == 2]$color <- "brown2"
+V(train)[V(train)$type == 3]$color <- "salmon2"
+
+
+plot(train,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Trainerstationen",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+## Nur Trainer
+
+trainers <- delete.vertices(train, V(train)[type!="1"])
+trainers
+
+plot(trainers,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     main ="Teilnetzwerk Nur Trainer",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+# Erkenntnis: Von 50 Spielern sind 29 später Trainer geworden. Daraus lässt sich ableiten, dass Trainer der "übliche" Weg nach der Profikarriere ist, aber nicht so eindeutig wie erwartet. 
+
+## Teilnetzwerk Nationaltrainer
+
+train_national <- delete_vertices(train, V(train)[type=="2"])
+train_national
+V(train_national)[V(train_national)$type=="1"]$color <- "lightsalmon"
+V(train_national)[V(train_national)$type=="3"]$color <- "tomato1"
+
+plot(train_national,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Nationaltrainer",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+## Erkenntnis: Die eigene Nation zu trainieren ist der klassische Weg vieler Spieler, es gibt aber auch einige, die andere Nationen trainiert haben.
+
+## Clubtrainer
+
+train_club <- delete_vertices(train, V(train)[type=="3"])
+train_club
+V(train_club)[V(train_club)$type=="1"]$color <- "lightpink3"
+V(train_club)[V(train_club)$type=="2"]$color <- "rosybrown1"
+
+plot(train_club,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Clubtrainer",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+# Teilnetzwerke Clubtrainer und Nationaltrainer im Vergleich
+
+par(mfrow=c(1,2), mar=c(0,0,2,0))
+
+plot(train_national,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     edge.color="black",
+     vertex.frame.color=NA,
+     main ="Teilnetzwerk Nationaltrainer",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+plot(train_club,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     edge.color="black",
+     vertex.frame.color=NA,
+     main ="Teilnetzwerk Nationaltrainer",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+par(mfrow=c(1,1), mar=c(0,0,1,2))
+
+## Erkenntnis: Es haben mehr Spieler später Clubs trainiert, statt Nationalmannschaften. Der klassische Weg, ist es, einen Club zu trainieren, bei dem man selbst gespielt hat. Auch hier gibt es wieder Ausnahmen und sogar welche, die den Rivalenclub ihres ehemaligen Clubs trainiert haben.
+
+```
+Ergebnis Hypothese A: Die Hypothese kann bestätigt werden, da der Großteil der Top 50 Fußballspieler des 20. Jahrhunderts nach der Profikarriere die Funktion eines Trainers eingenommen hat. 
+
+Hypothese B: Es sind in den gewählten Top 50 mehr Offensivspieler vertreten, als andere Spielerpositionen. 
+
+```{r Hypothese B und Teilnetzwerke, fig.height=10, fig.width=14, message=TRUE, warning=TRUE, paged.print=TRUE}
+
+## Spieler nach Positionen
+
+player <- delete_vertices(football, V(football)[type!=1])
+player
+V(player)[V(player)$position=="3"]$color <- "palegreen"
+V(player)[V(player)$position=="2"]$color <- "darkseagreen3"
+V(player)[V(player)$position=="1"]$color <- "aquamarine4"
+
+plot(player,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Spieler nach Positionen",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+## Teilnetzwerke Spielerpositionen im Vergleich
+
+par(mfrow=c(1,3), mar=c(2,0,2,0))
+
+goalkeeper <- delete_vertices(player, V(player)[position!=3])
+goalkeeper
+
+plot(goalkeeper,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Spieler nach Positionen",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+defender <- delete_vertices(player, V(player)[position!=2])
+defender
+
+plot(defender,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Defensivspieler",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+
+attacker <- delete_vertices(player, V(player)[position!=1])
+attacker
+
+plot(attacker,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Offensivspieler",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+par(mfrow=c(1,3), mar=c(2,0,2,0))
+
+## Erkenntnis: Es sind viel mehr Offensivspieler in den Top 50 vertreten, kaum Defensivspieler und sogar nur 4 Torhüter.
+
+```
+Ergebnis Hypothese B: Hypothese B konnte ebenfalls bestätigt werden, da der Großteil der Top 50 Fußballer Offensivspieler war. Daraus lässt sich interpretieren, dass viele Fußballspieler eher als Top-Spieler wahrgenommen werden, wenn sie in Stürmerpositionen spielen. 
+
+Hypothese C: Vereine, die heute weiterhin sehr erfolgreich sind, waren auch im 20. Jahrhundert für viele Spieler attraktiv und sind sogenannte "Broker".
+
+```{r Hypothese C und Teilnetzwerke, fig.height=10, fig.width=14, message=TRUE, warning=TRUE, paged.print=TRUE}
+
+## Nur Clubs
+club <- delete_vertices(football, V(football)[type!=2])
+club
+
+plot(club,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Vereine",
+     sub ="des 20. Jahrhunderts")
+
+## Erkenntnis: Die Clubs aus den europäischen Top 5 Ligen (England, Spanien, Italien, Deutschland, Frankreich) dominieren. Dies ist bis heute so. 
+
+## Welche Clubs haben die meisten Kanten und somit sehr wahrscheinlich Beziehungen zu vielen Spielern aus der Top 50?
+
+dsclub <- degree(football)
+sort(dsclub)
+
+## AC Mailand, Manchester United, FC Barcelona, Real Madrid und Juventus Turin sind die fünf Vereine mit den meisten Kanten in unserem Netzwerk. Im nächsten Schritt schauen wir uns das Ego-Netzwerk von Real Madrid näher an - der Verein, der den Rekord als Champions-League Sieger hält. 
+
+## Egonetzwerk Real Madrid 
+
+real_madrid <- make_ego_graph(football, order=1, c("Real"))
+real_madrid
+real_madrid <- real_madrid[[1]]
+
+plot(real_madrid,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Real Madrid",
+     sub ="des 20. Jahrhunderts")
+
+## Das Ego-Netzwerk zeigt, dass acht Spieler der Top 50 im 20. Jahrhundert bei Real Madrid gespielt haben. Die meisten der Fußballer haben jedoch nur die Beziehungsart "Spieler" zum Verein. Des Weiteren schauen wir uns den größten Konkurrenten des Vereins in der spanischen Liga an:  
+
+## Egonetzwerk FC Barcelona
+
+barcelona <- make_ego_graph(football, order=1, c("Barca"))
+barcelona
+barcelona <- barcelona[[1]]
+
+plot(barcelona,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     main ="Teilnetzwerk FC Barcelona",
+     sub ="des 20. Jahrhunderts")
+
+## Das Ego-Netzwerk des FC Barcelona weist nur Kanten zu sieben der Top 50 Spieler auf. Auch hier sind die meisten Beziehungen ausschließlich auf der Spielerebene. Hier zeigt sich zudem, dass viele Kanten nicht unbedingt heißen, dass ein Verein zu vielen Spielern Beziehungen hat, sondern dass viele Fußballer oftmals "vereinstreu" waren und lange dort gespielt haben. Zuletzt visualisieren wir das Ego-Netzwerk des AC Mailand: 
+
+## Egonetzwerk AC Mailand
+
+milan <- make_ego_graph(football, order=1, c("Milan"))
+milan <- milan[[1]]
+
+plot(milan,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.frame.color=NA,
+     vertex.label.color="black",
+     main ="Teilnetzwerk FC Barcelona",
+     sub ="des 20. Jahrhunderts")
+
+## Der AC Mailand ist bis heute ein erfolgreicher Verein und weißt auch im 20. Jahrhundert schon Beziehungen zu vielen Top-Spielern auf. 
+
+```
+Ergebnis Hypothese C: Bis heute erfolgreiche europäische Vereine, waren auch schon damals beliebt und erfolgreich. Die beiden spanischen Topclubs FC Barcelona und Real Madrid waren schon im 20. Jahrhundert sehr attraktiv für Top-Fußballer und können als sogenannte "Karrieresprungbretter" benannt werden.
+
+Hypothese D: Es wird am meisten Brasilianer im Netzwerk geben, da Brasilien den höchsten Degree-Wert im Gesamtnetzwerk hat. 
+
+```{r Hypothese D und Teilnetzwerke, fig.height=10, fig.width=14, message=TRUE, warning=TRUE, paged.print=TRUE}
+
+## Teilnetzwerk nach Nationalitäten der Spieler: Für die folgenden Teilnetzwerke haben wir eine neue Edgelist erstellt, die die Dekaden nochmal zusammenfasst. Daher lesen wir den Datensatz neu ein. 
+
+# Dekaden-Datensatz einlesen
+
+edges_dec <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph50/main/EdgesDecade.csv", header=T, as.is=T, sep = ",")
+nodes_dec <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph50/main/WorldSoccerNodelist.csv", header=T, as.is=T, sep = ",")
+
+# Matrix erstellen
+
+edgematrix <-as.matrix(edges_dec)
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt
+ 
+football_new <- graph_from_data_frame(d=edgematrix, vertices=nodes_dec, directed=F)
+
+# Welche Nationalität hat die meisten Weltfußballer hervorgebracht?
+
+# Datensatz football_new wird verwendet, Datensatz football_new verstehen
+
+list.vertex.attributes(football_new)
+vertex.attributes(football_new)$nationality
+
+# Selektieren nach Spielern
+players_nations <- delete_vertices(football_new, V(football_new)[type != 1])
+vertex.attributes(players_nations)$nationality
+
+## Ergebnis: 9x England, 8x Brasilien, 6x Italien, 5x Deutschland, 4x Niederlande, 3x Argentinien, 3x Frankreich, 2x Wales, 1x Nordirland,  1x Schottland,  1x Mosambik, 1x Marokko, 1x Rumanien,1x Russland, 1x Ungarn, 1x Danemark, 1x Bulgarien, 1x Liberia. Die meisten der Top 50 Weltfußballer sind also gebürtig aus England, obwohl Brasilien die meisten Kanten hat. Daraus lässt sich ableiten, dass die brasilianischen Fußballer lange für die Nationalmanschaft gespielt haben. Gleichzeitig kann dies auch bedeuten, dass nicht jeder Fußballer englischer Herkunft für die eigene englische Nationalmannschaft gespielt hat.
+
+```
+Ergebnis Hypothese D: Die Hypothese konnte nicht widerlegt werden, da die meisten Fußballer aus den Top 50 englischer Herkunft sind. 
+
+Hypothese E: Vor allem Spieler aus der Neuzeit (ab den 80ern) wurden zu den Top-Fußballern des 20. Jahrhunderts gewählt, weil die Umfrage unserer Datenerhebung 1999 durchgeführt wurde.
+
+```{r Hypothese E und Teilnetzwerke, fig.height=10, fig.width=14, message=TRUE, warning=TRUE, paged.print=TRUE}
+
+# Datensatz verstehen
+
+list.edge.attributes(football_new)
+edge.attributes(football_new)$decade
+
+# Selektieren nach Dekaden
+
+football_new
+dec30 <- subgraph.edges(football_new, E(football_new)[decade == 1930])
+dec40 <- subgraph.edges(football_new, E(football_new)[decade == 1940])
+dec50 <- subgraph.edges(football_new, E(football_new)[decade == 1950])
+dec60 <- subgraph.edges(football_new, E(football_new)[decade == 1960])
+dec70 <- subgraph.edges(football_new, E(football_new)[decade == 1970])
+dec80 <- subgraph.edges(football_new, E(football_new)[decade == 1980])
+dec90 <- subgraph.edges(football_new, E(football_new)[decade == 1990])
+dec00 <- subgraph.edges(football_new, E(football_new)[decade == 2000])
+dec10 <- subgraph.edges(football_new, E(football_new)[decade == 2010])
+dec20 <- subgraph.edges(football_new, E(football_new)[decade == 2020])
+
+# Selektieren nach Spielern 
+players30 <- delete_vertices(dec30, V(dec30)[type != 1])
+players40 <- delete_vertices(dec40, V(dec40)[type != 1])
+players50 <- delete_vertices(dec50, V(dec50)[type != 1])
+players60 <- delete_vertices(dec60, V(dec60)[type != 1])
+players70 <- delete_vertices(dec70, V(dec70)[type != 1])
+players80 <- delete_vertices(dec80, V(dec80)[type != 1])
+players90 <- delete_vertices(dec90, V(dec90)[type != 1])
+players00 <- delete_vertices(dec00, V(dec00)[type != 1])
+players10 <- delete_vertices(dec10, V(dec10)[type != 1])
+players20 <- delete_vertices(dec20, V(dec20)[type != 1])
+
+# Anzahl der Spieler und deren Nationalitäten je Dekade 
+
+vertex.attributes(players30)$name
+vertex.attributes(players30)$nationality
+
+# Dekade 1930: 2 Weltfußballer, aus: 1x England, 1x Italien
+
+vertex.attributes(players40)$name
+vertex.attributes(players40)$nationality
+
+# Dekade 1940: 7 Weltfußballer, aus: 2x England, 1x Wales, 1x Brasilien,  1x Italien, 1x Ungarn, 1x Argentinien
+
+vertex.attributes(players50)$name
+vertex.attributes(players50)$nationality
+
+# Dekade 1950: 17 Weltfußballer, aus: 6x England, 4x Brasilien, 1x Wales,  1x Mosambik, 1x Marokko, 1x Russland, 1x Italien, 1x Ungarn, 1x Argentinien      
+
+
+vertex.attributes(players60)$name
+vertex.attributes(players60)$nationality
+
+# Dekade 1960: 22 Weltfußballer, aus: 5x Brasilien, 5x England, 2x Deutschland, 1x Nordirland, 1x Wales, 1x Niederlande, 1x Schottland, 1x Mosambik, 1x Marokko, 1x Russland,  1x Ungarn, 1x Argentinien, 1x Italien
+
+vertex.attributes(players70)$name
+vertex.attributes(players70)$nationality
+
+# Dekade 1970: 31 Weltfußballer, aus: 5x England, 3x Italien, 4x Deutschland, 1x Nordirland, 2x Wales, 2x Niederlande, 1x Schottland, 6x Brasilien, 1x Russland, 2x Argentinien, 1x Frankreich, 1x Ungarn, 1x Mosambik, 1x Marokko
+
+vertex.attributes(players80)$name
+vertex.attributes(players80)$nationality
+
+# Dekade 1980: 40 Weltfußballer, aus: 5x Italien, 5x Deutschland, 5x Brasilien, 4x England, 4x Niederlande, 3x Argentinien, 3x Frankreich, 2x Wales, 1x Nordirland,1x Schottland, 1x Mosambik, 1x Marokko, 1x Rumanien, 1x Ungarn, 1x Danemark, 1x Bulgarien, 1x Liberia 
+
+vertex.attributes(players90)$name
+vertex.attributes(players90)$nationality
+
+# Dekade 1990: 32 Weltfußballer, aus: 5x Brasilien, 4x Italien, 4x Niederlande, 3x Argentinien, 3x Deutschland, 3x England, 3x Frankreich, 1x Schottland,  1x Rumanien, 1x Ungarn, 1x Wales, 1x Danemark, 1x Bulgarien, 1x Liberia
+
+vertex.attributes(players00)$name
+vertex.attributes(players00)$nationality
+
+# Dekade 2000: 23 Weltfußballer, aus: 4x Italien, 4x Brasilien, 3x Niederlande, 2x England, 2x Deutschland, 1x Argentinien, 1x Schottland, 1x Rumanien, 1x Wales, 1x Daneamrk, 1x Bulgarien, 1x Liberia, 1x Frankreich
+
+vertex.attributes(players10)$name
+vertex.attributes(players10)$nationality
+
+# Dekade 2010: 13 Weltfußballer, aus: 2x Niederlande, 2x England, 2x Deutschland, 2x Brasilien, 1x Schottland, 1x Rumanien,  1x Bulgarien, 1x Liberia, 1x Frankreich
+
+vertex.attributes(players20)$name
+vertex.attributes(players20)$nationality
+
+# Dekade 2020: 3 Weltfußballer, aus: 1x Rumanien, 1x Deutschland, 1x Frankreich
+
+# Erkenntnis: Die Fußballer der Top 50 Liste waren oftmals über mehrere Dekaden aktiv. Während der Dekade 1980 haben die meisten Fußballer gespielt. 
+
+```
+Ergebnis Hypothese E: Die Hypothese lässt sich nicht eindeutig wiederlegen, da die Spieler oftmals über mehrere Dekaden aktiv waren. Auffällig ist jedoch, dass in den späteren Dekaden auch mehr Fußballer der Liste gespielt haben, als in den früheren Dekaden. Daraus ließe sich interpretieren, dass die Fußballer, die in späten Dekaden gespielt haben, den Wählern aus der Datenerhebung eher im Gedächtnis blieben und deswegen gewählt wurden, als Fußballer der frühen Dekaden.
+
+## Teilnetzwerke nach Dekaden im Vergleich
+
+```{r Visualisierung der Teilnetzwerke nach Dekaden, fig.height=8, fig.width=10}
+
+# Teilnetzwerk 1900 und 1910 im Vergleich
+
+par(mfrow=c(1,2), mar=c(0,0,2,0))
+
+plot(dec00,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.color="darkseagreen3",
+     edge.color="black",
+     main ="Teilnetzwerk Dekade 1900",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+plot(dec10,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk Dekade 1910",
+     vertex.color="darkseagreen4",
+     edge.color="black",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+par(mfrow=c(1,1), mar=c(0,0,1,2))
+
+# Teilnetzwerk 1920 und 1930 im Vergleich
+
+par(mfrow=c(1,2), mar=c(0,0,2,0))
+
+plot(dec20,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.color="olivedrab3",
+     edge.color="black",
+     main ="Teilnetzwerk der Dekade 1920",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+plot(dec30,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     edge.color="black",
+     vertex.color="olivedrab4",
+     main ="Teilnetzwerk der Dekade 1930",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+par(mfrow=c(1,1), mar=c(0,0,1,2))
+
+# Teilnetzwerk 1940 und 1950 im Vergleich 
+
+par(mfrow=c(1,2), mar=c(0,0,2,0))
+
+plot(dec40,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     edge.color="black",
+     vertex.color="cyan3",
+     main ="Teilnetzwerk der Dekade 1940",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+plot(dec50,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.color="powderblue",
+     edge.color="black",
+     main ="Teilnetzwerk der Dekade 1950",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+par(mfrow=c(1,1), mar=c(0,0,1,2))
+
+# Teilnetzwerk 1960 und 1970 im Vergleich
+
+par(mfrow=c(1,2), mar=c(0,0,2,0))
+
+plot(dec60,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.color="brown3",
+     edge.color="black",
+     main ="Teilnetzwerk der Dekade 1960",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+plot(dec70,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     edge.color="black",
+     vertex.color="coral1",
+     main ="Teilnetzwerk der Dekade 1970",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+par(mfrow=c(1,1), mar=c(0,0,1,2))
+
+# Teilnetzwerk 1980 und 1990 im Vergleich 
+
+par(mfrow=c(1,2), mar=c(0,0,2,0))
+
+plot(dec80,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     edge.color="black",
+     vertex.color="tan",
+     main ="Teilnetzwerk der Dekade 1980",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+plot(dec90,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     edge.color="black",
+     vertex.color="tan2",
+     main ="Teilnetzwerk der Dekade 1990",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+par(mfrow=c(1,1), mar=c(0,0,1,2))
+
+# Der Vergleich der Teilnetzwerke nach Dekaden zeigt, wie sich die Weltfußballer und ihre Beziehungen im Laufe der Zeit verändert haben. Die Dekaden 1920 und 1930 weisen weniger Knoten und Kanten auf, als die Teilnetzwerke späterer oder früherer Dekaden.
+
+```
+
+Hypothese F: Spieler aus der früheren Zeit haben weniger Kanten, d.h. sie sind weniger vernetzt, als Spieler aus der Neuzeit (ab den 80ern), weil sie "vereinstreuer" waren.
+
+```{r Hypothese F und Teilnetzwerke, fig.height=10, fig.width=14, message=TRUE, warning=TRUE, paged.print=TRUE}
+
+# Teilnetzwerk nach zusammengefassten Dekaden erstellen
+
+# Selektieren nach Dekaden
+early <- subgraph.edges(football_new, E(football_new)[decade <= 1970])
+late <- subgraph.edges(football_new, E(football_new)[decade >= 1980])
+
+#Selektieren nach Spielern
+earlyplayers <- delete_vertices(early, V(early)[type == "3"])
+lateplayers <- delete_vertices(late, V(late)[type == "3"])
+
+# Anzahl der Kanten und Knoten Weltfußballer aus den jeweiligen zusammengefassten Dekaden anzeigen lassen
+
+earlyplayers
+lateplayers
+
+# Erkenntnis: Das Teilnetzwerk aus der früheren Dekade besteht aus 165 Knoten und 961 Kanten. Das Teilnetzwerk aus der späteren Dekade hingegen besteht aus 215 Knoten und 1236 Kanten. 
+
+# Visualisierung im Vergleich
+
+V(earlyplayers)[V(earlyplayers)$type == 1]$color <- "lightskyblue1"
+V(earlyplayers)[V(earlyplayers)$type == 2]$color <- "lightskyblue3"
+V(earlyplayers)[V(earlyplayers)$type == 1]$shape <- "circle"
+V(earlyplayers)[V(earlyplayers)$type == 2]$shape <- "square"
+V(earlyplayers)[V(earlyplayers)$type == 3]$shape <- "square"
+
+V(lateplayers)[V(lateplayers)$type == 1]$color <- "lightsteelblue2"
+V(lateplayers)[V(lateplayers)$type == 2]$color <- "lightsteelblue3"
+V(lateplayers)[V(lateplayers)$type == 1]$shape <- "circle"
+V(lateplayers)[V(lateplayers)$type == 2]$shape <- "square"
+V(lateplayers)[V(lateplayers)$type == 3]$shape <- "square"
+
+
+par(mfrow=c(1,2), mar=c(0,0,4,0))
+
+plot(earlyplayers,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk frühe Dekade",
+     sub ="des 20. Jahrhunderts")
+
+plot(lateplayers,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk späte Dekade",
+     sub ="des 20. Jahrhunderts")
+
+
+par(mfrow=c(1,1), mar=c(0,0,4,0))
+ 
+```
+Ergebnis Hypothese F: Auch diese Hypothese kann nicht eindeutig widerlegt werden, da das Teilnetzwerk der späteren Dekade mehr Akteure und damit einhergehend auch mehr Kanten hat. Insgesamt zeigt die Visualisierung, dass die Fußballspieler in der späten Dekade vernetzter waren, als in der frühen, weil sich hier fünf Teilgruppen in dem Teilnetzwerk bilden und im früheren sechs. Hier zeigt sich zudem, welche Fußballspieler in der gleichen Hälfte des Jahrhunderts gemeinsam im gleichen Verein gespielt haben.
+
+Hypothese G: Große erfolgreiche Vereine setzten gezielt auf die Förderung junger Talente, um erfolgreich zu sein. 
+
+```{r Hypothese G und Teilnetzwerke, fig.height=10, fig.width=14, message=TRUE, warning=TRUE, paged.print=TRUE}
+
+footballplayer_age <- delete_vertices(football, V(football)[type != 1])
+footballplayer_age
+
+young <- delete_vertices(footballplayer_age, V(footballplayer_age)[start.age != "1"])
+young
+
+# 33 Spieler haben unter 18 ihre Karriere begonnen. 
+
+older <- delete_vertices(footballplayer_age, V(footballplayer_age)[start.age != "2"])
+older
+
+# 14 Spieler haben ihre Karriere zwischen 18 und 20 begonnen.
+
+oldest <- delete_vertices(footballplayer_age, V(footballplayer_age)[start.age != "3"])
+oldest
+
+# Nur 3 Spieler haben ihre Karriere nach dem 20. Lebensjahr begonnen.
+
+# Visualisierung nach Alter
+
+edges_startage <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph-startage/main/StartageEdgelist.csv", header=T, as.is=T, sep = ",")
+nodes_startage <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph-startage/main/StartageNodelist.csv", header=T, as.is=T, sep = ",")
+
+# Matrix erstellen
+edgematrix <-as.matrix(edges_startage)
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt s
+football_startage <- graph_from_data_frame(d=edgematrix, vertices=nodes_startage, directed=F)
+football_startage
+
+football_startage_new <- delete_vertices(football_startage, V(football_startage)$type != 1)
+
+V(football_startage_new)[V(football_startage_new)$startage == 1]$color <- "red"
+V(football_startage_new)[V(football_startage_new)$startage == 2]$color <- "yellow"
+V(football_startage_new)[V(football_startage_new)$startage == 3]$color <- "darkorange"
+
+plot(football_startage_new,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk nach Alter",
+     sub ="des 20. Jahrhunderts")
+
+# Mit Vereinen 
+
+edges_startage_clubs <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph-startage/main/NAEdges.csv", header=T, as.is=T, sep = ",")
+nodes_startage_clubs <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph-startage/main/NANodes.csv", header=T, as.is=T, sep = ",")
+
+# Matrix erstellen
+edgematrix <-as.matrix(edges_startage_clubs)
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt 
+
+football_startage_1 <- graph_from_data_frame(d=edgematrix, vertices=nodes_startage_clubs, directed=F)
+football_startage
+
+football_startage_2 <- delete_vertices(football_startage_1, V(football_startage_1)$type == 3)
+
+V(football_startage_2)[V(football_startage_2)$startage == 1]$color <- "red"
+V(football_startage_2)[V(football_startage_2)$startage == 2]$color <- "yellow"
+V(football_startage_2)[V(football_startage_2)$startage == 3]$color <- "darkorange"
+V(football_startage_2)[V(football_startage_2)$type == 1]$shape <- "circle"
+V(football_startage_2)[V(football_startage_2)$type == 2]$shape <- "square"
+V(football_startage_2)[V(football_startage_2)$type == 3]$shape <- "square"
+V(football_startage_2)[V(football_startage_2)$name == "Milan"]$color <- "coral1" 
+V(football_startage_2)[V(football_startage_2)$name == "FCB"]$color <- "coral1"
+V(football_startage_2)[V(football_startage_2)$name == "Real"]$color <- "coral1"
+V(football_startage_2)[V(football_startage_2)$name == "Juve"]$color <- "coral1"
+V(football_startage_2)[V(football_startage_2)$name == "ManUtd"]$color <- "coral1"
+
+# Nun heben wir die Vereine mit hohen Degree-Werten hervor
+
+plot(football_startage_2,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     main ="Teilnetzwerk nach Alter und Vereinen",
+     sub ="des 20. Jahrhunderts")
+
+```
+Ergebnis Hypothese G: Die meisten der erfolgreichen Weltfußballer beginnen ihre Karriere schon vor Vollendung des 18. Lebensjahrs. Vor allem bei den erfolgreichen Vereinen mit hohem Degree-Wert zeigt sich, dass sie Verbindungen zu den Spielern unter 18 aufweisen. AC Mailand sticht hier besonders hervor, denn der Knoten ist von den meisten jungen Fußballern umgeben. Hier lässt sich interpretieren, dass große Vereine vor allem junge Talente rekrutieren. Allerdings lässt sich nicht feststellen, ob die Fußballer bei den erfolgreichen Vereinen tatsächlich unter 18 waren oder erst später zu diesen gewechselt sind. 
+
+# Teilnetzwerke: Komponenten, Cluster und Cliquen
+
+In der sozialen Netzwerkanalyse kann ermittelt werden, aus wie vielen Untergruppen ein Gesamtnetzwerk besteht - den sogenannten Clustern. Dabei handelt es sich um eine Betrachtung interner Differenzierungen des Gesamtnetzwerkes. Die Hervorhebung und Abgrenzung solcher Teilgruppen erfolgt entweder dadurch, dass Akteure identifiziert und betrachtet werden, die untereinander enge Beziehungen zueinander haben oder dadurch, dass Akteure ausgewählt werden, die ähnliche Außenbeziehungen zu allen anderen Personen im Netzwerk haben (Rürup et al., 2015).
+
+## Komponenten
+
+__Komponenten analysieren__
+
+Der Befehl count_components zeigt, dass das Gesamtnetzwerk der Weltfußballer aus drei Komponenten besteht, die nicht miteinander verbunden sind: Einer großen mit 283 Knoten, einer kleineren mit 12 Knoten und einer mit nur 3 Knoten. 
+
+```{r Komponenten analysieren}
+# Anzahl der Komponenten
+count_components(football)
+
+# Unteranalyse der Hauptkomponente
+is_connected(football)
+
+# Analyse der Verteilung der Komponenenten
+components(football, mode = c("weak", "strong"))
+
+# Analyse der starken Komponenten
+components(football, mode = "strong")
+
+# Anzahl der Komponenten
+count_components(football)
+
+```
+```{r Prüfung verbundener Cluster}
+
+# Anzahl der Clusters
+clusters(football)
+
+# Sind die Cluster miteinander verbunden?
+is_connected(football)
+
+
+```
+
+```{r Komponenten berechnen und isolieren, fig.height=10, fig.width=20}
+
+# Anzahl der Clusters
+clusters(football)
+
+# Komponenten auftrennen
+football_comp <- decompose.graph(football)
+football_comp
+
+# Komponenten neu benennen
+football_comp1 <- football_comp[[1]]
+football_comp2 <- football_comp[[2]]
+football_comp3 <- football_comp[[3]]
+
+# neue Teilkomponenten analysieren
+football_comp1
+football_comp2
+football_comp3
+
+# Visualisierung und Vergleich der Komponenten 
+
+par(mfrow=c(1,3), mar=c(2,0,2,0))
+
+plot(football_comp1,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.4,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.color="sienna",
+     main ="Hauptkomponente Weltfussballer-Netzwerk")
+
+plot(football_comp2,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.4,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.color="tomato",
+     main ="Kleinere Komponente Weltfussballer-Netzwerk")
+
+plot(football_comp3,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.4,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.color="orange",
+     main ="Kleinste Komponente Weltfussballer-Netzwerk")
+
+par(mfrow=c(1,3), mar=c(2,0,2,0))
+
+```
+
+```{r Komponenten im Vergleich}
+
+# Dichteberechnungen im Vergleich
+
+edge_density(football)
+edge_density(football_comp1)
+edge_density(football_comp2)
+edge_density(football_comp3)
+
+```
+
+Das Gesamtnetzwerk besitzt eine Dichte von 4,97 %. Die Hauptkomponente hat eine Dichte von 5,3 % während die kleinere Komponente mit 68,18 % eine noch größere Dichte besitzt. Die kleinere Teilkomponente ist damit deutlich stärker vernetzt als die Hauptkomponente. Die kleinste Komponente aus nur 3 Knoten ist am stärksten vernetzt mit einer Dichte von 12,66667. 
+
+## Cluster
+
+```{r Clusterberechnung Walktrap, fig.height=10, fig.width=20}
+
+# Clusterberechnung
+
+plot(football_comp1, vertex.color="grey80", main="Hauptkomponente")
+
+# Berechnung der Cluster innerhalb der Komponente
+
+cl <- cluster_walktrap(football_comp1)
+modularity(cl)
+membership(cl)
+
+plot(cl, football_comp1,
+     edge.arrow.size=.2,
+     main="Cluster-Walktrap Analyse von der Hauptkomponente")
+```
+
+## Communities
+
+```{r Communities erstellen, fig.height=10, fig.width=20}
+# Anzahl der Clusters
+
+clusters(football)
+
+# Komponenten auftrennen
+
+football_comp_new <- decompose.graph(football)
+football_comp_new
+
+# Komponenten neu benennen
+football_comp_new_1 <- football_comp_new[[1]]
+
+
+# Berechnung der Cluster innerhalb der Komponente
+
+cluster_football_new <- cluster_walktrap(football_comp_new_1)
+modularity(cluster_football_new)
+membership(cluster_football_new)
+
+# Clusterberechnung
+
+plot(cluster_football_new, football_comp_new_1,
+     edge.arrow.size=.3,
+     vertex.color="grey75",
+     vertex.frame.color=NA,
+     main="Hauptkomponente via communities")
+
+
+membership(cluster_football_new)
+
+# Der Befehl sizes zeigt die Größe der Communities 
+
+sizes(cluster_football_new)
+
+
+# communities() zeigt die Zuordnung der jeweiligen Knoten auf die Communities
+
+communities(cluster_football_new)
+
+```
+
+```{r Cluster-Betweeness erstellen, fig.height=10, fig.width=20}
+# Clusterberechnung
+
+plot(football_comp_new_1, vertex.color="lightblue2", main="Hauptkomponente")
+
+# Berechnung der Cluster innerhalb der Komponente
+
+edge_bs_football <- cluster_edge_betweenness(football_comp_new_1)
+edge_bs_football
+
+plot(edge_bs_football, football_comp_new_1,
+     edge.arrow.size=.2,
+     main="Edge-Betweenness Cluster")
+
+# Berechnung Closeness der Hauptkomponente
+
+# Closeness-Zentralität berechnet die Knoten, die als zentral gelten, weil sie viele Alteri schnell oder indirekt erreichen können. Sie sind besonders nah an anderen Akteuren im Netzwerk angesiedelt (Rürup et al., 2015).
+
+close_comp <- closeness(football_comp_new_1, mode="all", normalized=TRUE)
+
+# liefert den Knoten mit der höchsten Anzahl von starken Beziehungen
+
+close_comp
+
+which.max(close_comp)
+# Real Madrid
+which.min(close_comp)
+# HSV
+
+```
+Aus der Berechnung lässt sich interpretieren, dass innerhalb der Cluster der Verein Real Madrid mit der höchsten Anzahl an starken Verbindungen eine zentrale Rolle im Netzwerk einnimmt. Der Verein HSV hat die niedrigste Zahl an "starken" Verbindungen.
+
+*Vergleich von Walktrap und Edge-Betweenness-Clustern*
+
+```{r Vergleich Walktrap und Edge-Betweeness, fig.height=10, fig.width=20}
+# Clusterberechnung
+plot(football_comp_new_1, vertex.color="grey80", main="Hauptkomponente")
+
+# Berechnung Walktrap-Methode
+cluster_football_comp <- cluster_walktrap(football_comp_new_1)
+
+# erstellt die Berechnung für die Modularität und deren Teilgruppen
+modularity_football_comp <- cluster_edge_betweenness(football_comp_new_1)
+modularity_football_comp
+
+# Visualisierung im Vergleich
+
+par(mfrow=c(1,2), mar=c(0,0,2,1)) 
+
+plot(cluster_football_comp, football_comp_new_1, edge.arrow.size=.2, main="Walktrap-Cluster")
+plot(modularity_football_comp, football_comp_new_1, edge.arrow.size=.2, main="Edge-Between-Cluster")
+
+par(mfrow=c(1,1), mar=c(0,0,2,1)) 
+```
+Zusammenfassend lässt sich sagen, dass unser Gesamtnetzwerk mit der Visualisierung in Cluster, Cliquen und Komponenten an Übersichtlichkeit gewinnt. Insgesamt lassen sich die Strukturen im Netzwerk somit besser herauslesen. Zudem konnten sich Vereine, die eine Broker-Funktion einnehmen, einfacher ermitteln.
+
+## Dyaden
+
+Häufig werden Dyaden und Triaden als „Hilfsgrößen“ für die Analyse der Struktur größerer Netzwerke oder zur Beschreibung der strukturellen Einbettung einzelner Akteure in das umgebende Beziehungsnetz verwendet, um die Komplexität zu reduzieren (Hummel & Sodeur, 2010).
+
+```{r Dyadenzenus vereinfachtes Gesamtnetzwerk, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+# Durchführung des Dyadenzensus
+dyad_census(football)
+
+```
+
+Bei ungerichteten d.h. symmetrischen Beziehungen besteht eine Verbindung (1 bzw +) oder sie besteht nicht (0 bzw. -) (Hummel & Sodeur, 2010). Die Berechnung zeigt, dass in unserem Netzwerk 2201 Verbindungen vorliegen. Asymmetrische Verbindungen liegen nicht vor, da unser Netzwerk ungerichtet ist. 
+
+# Reziprozität, Transitivität, Homophilie
+
+## Reziprozität
+
+Nach Fuhse (2018) ist Reziprozität "die allgemeine Neigung eines Akteurs, sich gegenüber anderen etwa so zu verhalten wie diese sich ihm gegenüber" (S. 163).
+
+```{r Reziprozität}
+
+# Reziprozität des Gesamtnetzwerks berechnen 
+reciprocity(football_new)
+
+```
+
+Die Reziprozität in unserem Netzwerk hat den Wert 1, da ausschließlich ungerichtete Verbindungen vorhanden sind.
+
+## Transitivität
+
+Transitivität steht für die Tendenz zu ausbalancierten Netzwerkkonstellationen. Positiv transitiv sind Netzwerke, wenn Akteure positive Beziehungen miteinander haben, die auch indirekt positiv verbunden sind. In negativ transitiven Netzwerken ist eine Sozialbeziehung negativ, wenn die Beteiligten indirekt über je eine positive und eine negative Beziehung verbunden sind. Und sie ist positiv, wenn die Beteiligten indirekt über zwei negative Beziehungen verbunden sind (Fuhse 2018).
+
+
+```{r Transitivität}
+
+# Transitivität des Gesamtnetzwerks berechnen
+transitivity(football_new)
+
+# Die Transitivität liegt bei 0, da keine triadischen Strukturen vorliegen und sich somit keine ausbalancierten Netzwerkonstellationen bilden. 
+
+```
+
+## Homophilie
+
+Homophilie bezeichnet den Effekt, dass sich oftmals Verbindungen oder sogar Freundschaften zwischen Personen mit ähnlicher kultureller Prägung bilden. Der Effekt tritt auch innerhalb von Kategorien wie Alter, Geschlecht oder ethnischer Herkunft auf (Fuhse, 2018).
+
+```{r Homophilie}
+
+# Homophilie
+
+# Assortivität im Hauptnetzwerk
+
+assortativity_nominal(football_new, V(football_new)$type, directed=FALSE)
+assortativity_nominal(football_new, V(football_new)$career, directed=FALSE)
+assortativity_nominal(football_new, V(football_new)$nationality, directed=FALSE)
+assortativity_nominal(football_new, V(football_new)$position, directed=FALSE)
+
+# Die Berechnung zeigt, dass alle Werte bei 0 liegen. Die Werte sind nur dann positiv, wenn sich ähnliche Knoten aufgrund von Eigenschaften miteinander verbinden. Ist das nicht der Fall, wird der Wert negativ. Die Berechnung nach "type" zeigt einen negativen Wert von -0.6358922. Dies resultiert daraus, dass wir die Beziehungen zwischen den Akteuren auf der individuellen Ebene sowie die zwischen der organisationalen Ebene nicht untersucht haben - und damit deren Eigenschaften - sondern nur die von Individuen zu Organisationen ausgehenden. Somit bringt die Berechnung keine weiterführenden Erkenntnisse. 
+
+```
+
+# Visualisiserung
+
+## Multiplexes Gesamtnetzwerk
+
+```{r Visualisierung eines multiplexe Netzwerke erstellen, fig.height=10, fig.width=14}
+
+library(igraph)
+
+edges_final <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph50/main/WorldSoccerEdgelist.csv", header=T, as.is=T, sep = ",")
+nodes_final <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph50/main/WorldSoccerNodelist.csv", header=T, as.is=T, sep = ",")
+
+edgematrix <-as.matrix(edges_final)
+
+football_final <- graph_from_data_frame(d=edgematrix, vertices=nodes_final, directed=F)
+football_final
+
+# definiert die Farbe der Relation
+
+E(football_final)[E(football_final)$relationship == 1]$color <- "tomato1" 
+E(football_final)[E(football_final)$relationship == 2]$color <- "navyblue"
+
+# definiert die Farbe und Form der Knoten
+
+V(football_final)[V(football_final)$type == 1]$shape <- "circle"
+V(football_final)[V(football_final)$type == 2]$shape <- "square"
+V(football_final)[V(football_final)$type == 3]$shape <- "square"
+V(football_final)[V(football_final)$type == 1]$color <- "aliceblue"
+V(football_final)[V(football_final)$type == 2]$color <- "steelblue"
+V(football_final)[V(football_final)$type == 3]$color <- "lightskyblue1"
+V(football_final)[V(football_final)$name == "Milan"]$color <- "brown2" 
+V(football_final)[V(football_final)$name == "FCB"]$color <- "brown2"
+V(football_final)[V(football_final)$name == "Real"]$color <- "brown2"
+V(football_final)[V(football_final)$name == "Juve"]$color <- "brown2"
+V(football_final)[V(football_final)$name == "ManUtd"]$color <- "brown2"
+
+plot(football_final,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.label.cex=0.5,
+     main ="Übersicht Gesamtnetzwerk Final",
+     sub ="Weltfußballer des 20. Jahrhunderts")
+
+```
+
+## Ego-Netzwerke
+
+"Unter einem egozentrierten Netzwerk versteht man die Beziehungen einer fokalen Person (Ego) zu anderen Personen (Alteri), mit denen sie in einem direkten Kontakt steht" (Wolf, 2010). 
+
+```{r Ego-Netzwerke der Spieler, fig.height=8, fig.width=10}
+
+library(igraph)
+
+edges_ego_final <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph50/main/WorldSoccerEdgelist.csv", header=T, as.is=T, sep = ",")
+nodes_ego_final <- read.csv("https://raw.githubusercontent.com/SNA-Gruppenarbeit-Weltfussballer/igraph50/main/WorldSoccerNodelist.csv", header=T, as.is=T, sep = ",")
+
+edgematrix <-as.matrix(edges_ego_final)
+
+ego_final <- graph_from_data_frame(d=edgematrix, vertices=nodes_ego_final, directed=F)
+ego_final
+
+# Wir untersuchen den Fußballer mit dem höchsten Degree-Wert und Betweenness-Wert
+
+ego_bs <- betweenness(ego_final, normalized=T)
+ego_bs
+sort(ego_bs)
+
+ego_ds <- degree(ego_final, mode="all") 
+ego_ds
+sort(ego_ds)
+
+# Ferenc Puskas ist der Fußballer mit dem höchsten Degree-Wert und Betweenness-Wert
+
+puskas <- make_ego_graph(ego_final, order=1, c("Ferenc Puskas"))
+puskas <- puskas[[1]]
+
+E(puskas)[E(puskas)$relationship == 1]$color <- "lightpink" 
+E(puskas)[E(puskas)$relationship == 2]$color <- "red4"
+
+plot(puskas,
+     asp=0, 
+     layout=layout_with_kk,
+     edge.arrow.size=.5,
+     vertex.size=10,
+     vertex.label.color="black",
+     vertex.frame.color=NA,
+     vertex.color="palevioletred",
+     main ="Ego-Netzwerk Ferenc Puskas",
+     sub ="des 20. Jahrhunderts")
+
+# Die Visualisierung zeigt, dass Ferenc Puskas zu 16 weiteren Knoten im Netzwerk eine Verbindung hat. Die meisten Kanten besitzt er in der Beziehungsdimension "Trainer". In der Position Spieler war er in mehr Vereinen und Nationalmannschaften aktiv, als in der Position als Trainer.
+
+```
+
+# Diskussion: Fazit, Limitationen und Ausblick
+
+## Zentrale Erkenntnisse
+
+Die ersten zentralen Erkenntnisse und Limitationen unserer Arbeit konnten wir schon nach dem Pretest feststellen. Wir haben gemerkt, dass wir in unserer weiteren Arbeit beziehungsweise Datenerhebung vor allem auf Genauigkeit, Sorgfalt wie zum Beispiel Leerzeichen und Doppelungen in der Erhebung der Edge- und Nodelisten achten müssen. Darüber hinaus wurde uns klar, dass wir am Ende ein sehr großes Netzwerk haben werden. Dementsprechend haben wir uns nach dem Pretest auch schon selbst limitiert: Anstatt der Top 100 haben wir nur die Daten von den Top 50-Spielern erhoben. Als letzte Erkenntnis aus dem Pretest geht hervor, dass große Vereine wie der FC Barcelona wichtige Broker innerhalb des Netzwerkes sind. Dies hat sich in der finalen Forschung ebenfalls erwiesen. 
+
+In unserem Code wurden schon einige wichtige Erkenntnisse genannt. Dadurch, dass unser Netzwerk relativ groß ist, war eine Zerlegung in verschiedene Teilnetzwerke notwendig. Zum Schluss wollen wir aber nochmal die zentralen und wichtigen Erkenntnisse zusammenfassen: 
+
+Die Selektion nach Vereinen mit einer hohen Degree-Zahl an Spielern hat gezeigt, dass der AC Mailand den höchsten Degree-Wert hat und damit die meisten Kanten im Netzwerk. Das heißt jedoch nicht zwangsläufig, dass viele der Top-Spieler beim AC Mailand gespielt haben, sondern dass die Spieler, die dort waren, auch über mehrere Jahre geblieben sind und gaktiv waren. Die Selektion der Nationalmannschaften nach hohem Degree-Wert hat uns die Erkenntnis gebracht, dass die brasilianische Nationalmannschaft mit den höchsten Degree-Wert im Netzwerk und damit die meisten Kanten im Vergleich zu anderen Nationalmannschaften hat. Das bedeutet, wie gerade bereits beschrieben nicht zwangsläufig, dass die meisten Top 50-Spieler der Liste auch in der brasilianischen Nationalmannschaft gespielt haben. Bestätigt wird dies zudem dadurch, dass die meisten Spieler der Liste englischer Herkunft sind. 
+
+Sehr interessante Erkenntnisse haben uns die Teilnetzwerke „nur Spieler“ und „auch Trainer“ im Verhältnis; Trainerstationen und „nur Trainer“ geliefert. Von 50 Spielern sind 29 später Trainer geworden. Somit wird klar, dass Trainer der "übliche" Weg nach der Profikarriere ist, aber nicht so eindeutig wie erwartet. Eine weitere spannende Frage wäre: Was haben die restlichen 21 gemacht? Das Teilnetzwerk „Nationaltrainer“ hat gezeigt, dass es ein klassischer Weg ist die eigene Nation zu trainieren. Es gibt aber auch einige, die andere Nationen trainiert haben. Eine weitere zentrale Erkenntnis ist, dass mehr Fußballer später Clubs trainiert haben, statt Nationalmannschaften. Der übliche Weg ist es also, einen Verein zu trainieren, bei dem man selbst gespielt hat. Auch hier gibt es wieder Ausnahmen und sogar welche, die den Rivalen Club ihres ehemaligen Clubs trainiert haben. 
+
+Wie wir anfangs auch schon vermutet hatten, gibt es viel mehr Offensivspieler in den Top 50, kaum Defensivspieler und sogar nur vier Torhüter. Auch die Vermutung, dass Vereine aus den europäischen Top fünf Ligen: England, Spanien, Italien, Deutschland und Frankreich dominieren, hat sich bestätigt. Die meisten Kanten und somit sehr wahrscheinlich Beziehungen zu vielen Spielern haben die Vereine AC Milan, FC Bayern, FC Barcelona, FC Liverpool und der Real Madrid. 
+
+## Limitationen 
+
+Da unser Netzwerk sehr groß ist und viele Knoten als auch Kanten hat, war die Arbeit für uns zunächst erschwert. Das Gesamtnetzwerk war ziemlich unübersichtlich. Die Zerlegung in kleinere Teilnetzwerke brachte dafür jedoch umso mehr Erkenntnisse. 
+
+Darüber hinaus haben wir uns durch die Reduzierung von 100 auf 50 Spielern schon eine eigene Limitation gesetzt und konnten somit nicht alle 100 Weltfußballer untersuchen. Außerdem ließen sich einige einige Netzwerkmaße wie den Indegree und Outdegree-Wert nicht berechnen, da unser Netzwerk ungerichtet und vor allem ungewichtet ist. Darüber hinaus hat die Berechnung von Triaden bei uns keine weiteren Erkenntnisse erbracht, da unser Netzwerk keine Beziehungen unter den Individuen (Fußballspielern) untersucht, sondern nur von der individuellen Ebene ausgehend zur organisatorischen Ebene. Zudem wurden die Verbindungen zwischen den Organisationen (Vereinen und Nationalmannschaften) ebenfalls nicht erhoben. Des Weiteren konnten wir vorher herausgesuchte Theorien nicht auf unser Netzwerk anwenden, da sich diese vor allem auf die individuelle Ebene der Netzwerkanalyse beziehen und wir dafür weitere Daten gebraucht hätten, die wiederum jedoch im Hinblick auf unsere Forschungsfrage nicht relevant waren.
+
+Im Nachhinein wären diese Daten jedoch interessant gewesen und man hätte über unsere Forschungsfrage hinaus weitere Aspekte im Netzwerk betrachten und interpretieren können.
+
+Die Theorien, die wir anfangs auf unser Projekt bezogen haben, konnten wir leider nicht prüfen, da wir keine Beziehungen zwischen den Spielern untereinander codiert haben. Der Homophilie-Effekt spielt dennoch eine große Rolle, da alle Spieler in ihrer Freizeit beziehungsweise in diesen Fällen sogar auf ihrem beruflichen Weg gemeinsamen Aktivitäten nachgehen. Darüber hinaus haben Spieler mit der gleichen kulturellen Prägung, d.h. die, die aus dem gleichen Herkunftsland kommen, oft bei einem gleichen Verein gespielt. Auch den zweiten theoretischen Ansatz, das soziale Kapital, konnten wir nicht belegen. Doch die Kommerzialisierung des Fußballs entwickelt sich rasant und spielte auch damals schon eine wichtige Rolle. Als letztes ist Konkurrenz und Kooperation auch bei unserem Netzwerk vorhanden, da die Spieler sich während Wettbewerben gegenseitig als Konkurrenz sehen, obwohl sie später - zum Beispiel in der Nationalmannschaft - wieder kooperieren. 
+
+## Fazit und Ausblick 
+
+Zusammenfassend kann man sagen, dass einige unserer Hypothesen, die wir am Anfang aufgestellt haben, bestätigt werden konnten, andere sich jedoch nicht eindeutig widerlegen ließen. Große Vereine, die heute noch erfolgreich sind, waren schon damals wichtige Broker für die Weltfußballer. Aber auch "kleine" Vereine, haben sich als wichtig herausgestellt, weil auch sie die Fußballer untereinander vernetzen.
+
+Um auf die Forschungsfrage unserer Arbeit zurückzukommen, haben die Visualisierungen und die Codierung gezeigt, dass viele der Weltfußballer zur gleichen Zeit in den großen Vereinen, die auch die wichtigen Broker in unserem Netzwerk darstellen, aktiv waren. Der übliche Karriereweg nach der eigenen aktiven Zeit ist die Arbeit als Trainer. Doch wie oben schon beschrieben, ist der Karriereweg nicht so eindeutig wie wir erwartet haben. Für die weitere Forschung wäre demnach interessant herauszufinden, wer von den Weltfußballern die Funktion eines Beraters oder weiteren ähnlichen Funktionen eingenommen hat. Über die Forschungsfrage hinaus haben uns die Berechnungen und Visualisierungen verschiedener Netzwerkmaße noch weitere Erkenntnisse über das Weltfußballer-Netzwerk und ihre Verbindungen untereinander erbracht. 
+
+
+# Anlage
+
+## Literatur
+
+Coleman, J. (1988). Social capital in the creation of human capital. American Journal of Sociology, 94, 95-120, https://link.springer.com/chapter/10.1007/978-3-658-21742-6_28
+
+DFL. (2019). Rekordumsatz und weitere Bestmarken | DFL Deutsche Fußball Liga. DFL Deutsche Fußball Liga GmbH - dfl.de. https://www.dfl.de/de/aktuelles/dfl-wirtschaftsreport-2019-rekordumsatz-und-weitere-bestmarken-bestaetigen-positive-wirtschaftliche-entwicklung-des-deutschen-profifussballs/ 
+
+Duden. (2021). Duden | Weltfußball | Rechtschreibung, Bedeutung, Definition, Herkunft. https://www.duden.de/rechtschreibung/Weltfuszball 
+
+Fuchs-Heinritz, W., & König, A. (2011). Pierre Bourdieu: Eine Einführung. UTB.
+
+Fuhse, J. A. (2018). Soziale Netzwerke (2. Aufl.). UVK Verlag. https://elibrary.utb.de/doi/book/10.36198/9783838549811 
+
+Hummell, H. J., & Sodeur, W. (2010). Dyaden und Triaden. In C. Stegbauer & R. Häußling (Hrsg.), Handbuch Netzwerkforschung (S. 379–395). VS Verlag für Sozialwissenschaften. https://doi.org/10.1007/978-3-531-92575-2_34 
+
+kicker. (2019). Ballon d’Or und FIFA-Weltfußballer—Was ist was? kicker.de. https://www.kicker.de/ballon_d_or_und_fifa_weltfussballer_was_ist_was_-666663/artikel
+
+Lazarsfeld, Paul F. & Merton, Robert K. (1954): Friendship as a Social Process: A Substantive and Methodological Analysis. In M. Berger, T. Abel und C. H. Page (Hrsg.), Freedom and Control in Modern Society, S. 18 – 66. New York: Van Nostrand. https://link.springer.com/content/pdf/10.1007%2F978-3-658-21742-6_76.pdf
+
+Rasch, D. (2014). Rettet den Fußball!: Zwischen Tradition, Kommerz und Randale (1. Aufl.). Verlag Die Werkstatt GmbH.
+
+Rytina, S., & Morgan, D. L. (1982). The Arithmetic of Social Relations: The Interplay of Category and Network. American Journal of Sociology, 88(1), 88–113. https://doi.org/10.1086/227635 
+
+Schmidt, L., Pfeffer, C., & Burton, E. (2018). FUSSBALL UND UNGLEICHE ENTWICKLUNG. 139.
+Schönig, W. (2015). Koopkurrenz in der Sozialwirtschaft: Zur sozialpolitischen Nutzung von Kooperation und Konkurrenz. Beltz Juventa.
+
+spox. (2019). FIFA-Weltfußballer: So funktioniert die Wahl und das sind die Unterschiede zum Ballon d’Or. spox.de. https://www.spox.com/de/sport/fussball/international/1909/Artikel/fifa-weltfussballer-so-verlief-die-wahl-unterschied-ballon-d-or-wahlberechtigte-abstimmung.html 
+
+Statista. (2018). Anzahl der Sportfans weltweit 2018. Statista.com. https://de.statista.com/statistik/daten/studie/387554/umfrage/anzahl-der-sportfans-weltweit/ 
+
+Statista. (2020). Zuschauerzahlen in den größten europäischen Fußballligen | Statista. Statista.com. https://de.statista.com/statistik/daten/studie/12292/umfrage/zuschauerzahlen-in-den-groessten-europaeischen-fussballligen/ 
+
+Symanzik, T. (2009). Netzwerk Fußball: Eine machtpsychologische Analyse zur Rolle der Bundesliga im Einflussfeld der Massenmedien [Universität Rostock]. https://rosdok.uni-rostock.de/file/rosdok_derivate_000000004153/Dissertation_Symanzik_2009.pdf 
+
+Wahnschaffe-Waldhoff, K., & Mutz, M. (2020). „Unter der Woche Konkurrenten, am Wochenende ein Team“ Zur Ambivalenz von Konkurrenz und Kooperation im professionellen Fußball. SozW Soziale Welt, 71(3), 341–372. https://doi.org/10.5771/0038-6073-2020-3-341 
+
+Werron, T. (2009). Zur sozialen Konstruktion moderner Konkurrenzen: das Publikum in der “Soziologie der Konkurrenz”. (Workingpaper des Soziologischen Seminars, 05/09). Luzern: Universität Luzern, Kultur- und Sozialwissenschaftliche Fakultät, Soziologisches Seminar. https://nbn-resolving.org/urn:nbn:de:0168-ssoar-382948
+
+Woratschek, H. (2004): Kooperenz im Sportmanagement – eine Konsequenz der Wertschöpfungslogik von Sportwettbewerben und Ligen, in: Zieschang, K., Woratschek, H./Beier, K. (Hrsg.), Kooperenz im Sportmanagement, Köln, S. 9-29. https://link.springer.com/content/pdf/10.1007%2F978-3-658-07448-7_9.pdf
+
+
+## Codebuch
+[Codebuch](https://github.com/SNA-Gruppenarbeit-Weltfussballer/Codebuch)
+
+Das Netzwerk hat nach dem [Codebuch](https://github.com/SNA-Gruppenarbeit-Weltfussballer/Codebuch) folgende Attribute:
+
+*Vertex-Attribute*
+**id** 
+eindeutige Identifikation jedes Einzelnen Knotens, der erfasst wird. Hier sowohl Spieler, als auch Vereine und Nationalmannschaften 
+**name**
+Name / Bezeichnung der Knoten (der Spieler/Vereine/Nationalmannschaften), wie sie im Netzwerk später angezeigt werden 
+**type**
+definiert die Art des Knotens
+1 = Spieler 
+2 = Verein 
+3 = Nationalmannschaft 
+**nationality** 
+definiert die Nationalität der Spieler / des Vereins, aktuell NICHT numerisch codiert 
+**birth**
+definiert das Jahr,  in dem die einzelnen Spieler geboren sind, numerisch in Jahreszahlen codiert 
+**career**
+definiert, ab wann die einzelnen Spieler bei der ersten Herrenmannschaft gespielt haben, numerisch in Jahreszahlen codiert 
+**startage**
+definiert, ab welchem Alter die Spieler ihre Profikarriere gestartet haben, zusammengefasst in 
+1 = U18 
+2 = 18 bis 20 
+3 = Ü20 
+**position**
+definiert, welche Position die Spieler hauptsächlich besetzt haben 
+1 = Torwart 
+2 = Defensiv 
+3 = Offensiv
+
+Die Vertex-Attribute treffen auf alle Knoten zu.
+
+*Edge-Attribute*
+
+**from** 
+entspricht der id in der Nodelist und definiert den jeweiligen Knoten, hier ausschließlich Fußballspieler/-trainer
+**to** 
+entspricht dem Verein oder der Nationalmannschaft, in dem der Spieler während eines bestimmten Jahrzehnts oder Jahr gespielt hat, hier ausschließlich Nationalmannschaften oder Vereine
+**year**
+definiert das Jahr, in dem der jeweilige Spieler/Trainer bei einem Verein / einer Nationalmannschaft gespielt oder trainiert hat 
+**decade** 
+definiert, in welchem Jahrzehnt der Spieler/Trainer in dem Verein / der Nationalmannschaft aktiv war 
+**relationship**
+definiert die Art der Beziehung 
+1 = Spieler im Verein / in der Nationalmannschaft 
+2 = Trainer des Vereins / der Nationalmannschaft 
+
+Die Edge-Attribute sind unterschiedlich verteilt. 
+
+
+## Datenmaterial und Skript
+
+[Datensatz](https://github.com/SNA-Gruppenarbeit-Weltfussballer/igraph50)
+
+## Team, Arbeitsaufwand und Lessons Learned
+
+## Teammitglieder
+
+Dunja Fadel
+Naomi Genter
+Jakob Hertl
+Christina Menner
+Veronika Veile
+
+## Arbeitsaufwand und Rollen im Team
+
+NN: Projektleitung und Coding, ca. 80 Stunden
+NN: Literaturrecherche und Auswertung, ca. 80 Stunden
+NN: Endbericht und Visualiserung, ca. 80 Stunden
+
+
+## Teamreflexion und Lessons learned
+
+Als wir uns mit der Teamreflexion beschäftigt haben, griffen wir nochmal auf unser Team-Manifest, welches wir am Anfang unserer Forschung verfasst haben, zurück. Wir konnten feststellen, dass wir einige Punkte genauso erfüllt haben, wie wir es uns vorgenommen haben. Bei der Zusammenarbeit konnten wir uns immer aufeinander verlassen. Wenn jemand krank war, ist eine andere Person eingesprungen. Auch wenn ein Teammitglied aus zeitlichen Gründen nicht zu einem Meeting kommen konnte, wurde dies früh genug mitgeteilt.  Wir haben uns also stets gegenseitig den Rücken gestärkt. Über WhatsApp konnten wir schnell Fragen oder Probleme klären. Wir hatten auch anfangs beschlossen, dass wir verschiedene Meilensteine und Deadlines festlegen. Diess haben wir so umgesetzt. Die Deadlines wurden alle eingehalten und dadurch hatten wir immer ein gemeinsames Ziel vor Augen. Auch die Arbeitsverteilung hat bei uns gut funktioniert. Die, die sich sicherer mit RStudio oder dem Schreiben für Edit fühlen, haben auch daran gearbeitet. Trotzdem haben wir uns gegenseitig die Chance gegeben, unsere Unsicherheiten mit R Studio oder Edit zu glätten. Unsere Dokumentation der Arbeitsfortschritte über Google Docs war zudem hilfreich und bot einen Überblick während der gesamten Forschung. Am Ende hatten wir einige Google Docs Dokumente (Excel-Listen, Literaturlisten, Konzept Forschungsbericht usw.), konnten hierbei aber gut die Übersicht behalten. Bei Problemen wie beispielsweise Fehlern in der Edge- oder Nodelist hat sich das ganze Team drangesetzt, um den Fehler zu finden. Niemand hat - trotz kurzer purer Verzweiflung aufgegeben - bis wir den Fehler gefunden hatten. Das wurde letztendlich durch das funktionierende iGraph-Objekt belohnt. 
+Natürlich hatten wir auch ein paar Probleme: Man muss sagen, obwohl die WhatsApp-Gruppe meistens geholfen hat, hat sie auch ab und zu für Verwirrung gesorgt. Daran haben wir gemerkt, dass die face-to-face-Kommunikation oder Meetings über Zoom doch die bessere Option sind. Wir haben im Nachhinein auch festgestellt, dass Genauigkeit, gute Absprachen und Kommunikation sehr wichtig sind. So können wir in Zukunft vor allem Fehler, wie beispielsweise die Erhebung des gleichen Vereins zweimal, vermeiden. 
+
